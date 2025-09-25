@@ -6,8 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <button>
-        TEST
+    
+    <h1> Min tile </h1>
+
+    <h2> sub tile </h2>
+    <h3> sub tile </h3>
+    <p> 본문입니다. </p>
+    
+    <div> 이름과 전화번호를 입력 </div>
+    
+    <input id="input-test" />
+    <button id="btn-test" >
+        Test
     </button>
+    <script>
+        var inputTest = document.getElementById("inout-test")
+        var inputnum = document.getElementById("input-num")
+        var btnTest = document.getElementById("btn-test")
+        
+        btnTest.addEventListener('click',()=> {
+            console.log('hello' + inputTest.value)
+        })
+    </script>
+
+
 </body>
 </html>
