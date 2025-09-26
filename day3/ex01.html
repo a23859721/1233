@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+</head>
+<body>
+   <div>
+    <!-- 덧셈 -->
+    <input id="add-num1" /> + <input id="add-num2"/> = <input id="add-result" readonly /><br><br>
+    
+    <!-- 뺄셈 -->
+    <input id="sub-num1" /> - <input id="sub-num2"/> = <input id="sub-result" readonly />
+   </div>
+
+   <div>
+    <button id="btn-add">submit +</button>
+    <button id="btn-subtract">submit -</button>
+   </div>
+
+   <script>
+    var addNum1 = document.getElementById("add-num1");
+    var addNum2 = document.getElementById("add-num2");
+    var addResult = document.getElementById("add-result");
+
+    var btnAdd = document.getElementById("btn-add");
+    btnAdd.addEventListener("click", ()=>{
+        var num1 = Number(addNum1.value);
+        var num2 = Number(addNum2.value);
+        addResult.value = num1 + num2;
+    });
+
+
+    var subNum1 = document.getElementById("sub-num1");
+    var subNum2 = document.getElementById("sub-num2");
+    var subResult = document.getElementById("sub-result");
+
+    var btnSubtract = document.getElementById("btn-subtract");
+    btnSubtract.addEventListener("click", ()=>{
+        var num1 = Number(subNum1.value);
+        var num2 = Number(subNum2.value);
+        subResult.value = num1 - num2;
+    });
+   </script>
+</body>
+</html>
