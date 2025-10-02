@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기차표 예약</title>
+</head>
+<body>
+    <h1> 기차표 예약</h1>
+
+    <h2> 출발역</h2>
+    <div>
+        <input type="text" id="seoul" /> <label for="seoul">서울</label>
+        <input type="text" id="cheonan" /> <label for="cheonan">천안</label>
+        <input type="text" id="sejong" /> <label for="sejong">세종</label>
+        <input type="text" id="iksan" /> <label for="iksan">익산</label>
+    </div>
+
+    <h2> 도착역</h2>
+    <div>
+        <input type="text" id="yeosu" /> <label for="yeosu">여수</label>
+        <input type="text" id="gwangju" /> <label for="gwangju">광주</label>
+        <input type="text" id="mokpo" /> <label for="mokpo">목포</label>
+    </div>
+
+    <button onclick="showResult()">제출</button>
+
+    <p id="result">결과 : </p>
+
+    <script>
+        function showResult() {
+            // 출발역 선택
+            let start = "";
+            if (document.getElementById("seoul").value) start = "서울";
+            else if (document.getElementById("cheonan").value) start = "천안";
+            else if (document.getElementById("sejong").value) start = "세종";
+            else if (document.getElementById("iksan").value) start = "익산";
+
+            // 도착역 선택
+            let end = "";
+            if (document.getElementById("yeosu").value) end = "여수";
+            else if (document.getElementById("gwangju").value) end = "광주";
+            else if (document.getElementById("mokpo").value) end = "목포";
+
+            if (start && end) {
+                document.getElementById("result").innerText = "결과 : " + start + " → " + end;
+            } else {
+                alert("출발역과 도착역 빈칸에 체크(값 입력)하세요!");
+            }
+        }
+    </script>
+</body>
+</html>
