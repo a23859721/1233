@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운터</title>
+  <style>
+    body {
+      background-color: blue;
+      color: white;
+      font-family: cursive;
+    }
+  </style>
+</head>
+<body>
+<h> 카운터</h>
+  <h1 id="count-text"> count : 0 </h1>
+  <button id="btn-inc"> inc(+) </button>
+  <button id="btn-reset"> reset(0) </button>
+
+  <script>
+    var countText = document.getElementById("count-text");
+    var btninc = document.getElementById("btn-inc");
+    var btnreset = document.getElementById("btn-reset");
+
+    var count = 0;
+
+    btninc.addEventListener("click", () => {
+      count = count + 1;
+      countText.innerText = " count : " + count;
+      console.log(count);
+    });
+
+    btnreset.addEventListener("click", () => {
+      count = 0;
+      countText.innerText = " count : " + count;
+      console.log(count);
+    });
+  </script>
+</body>
+</html>
