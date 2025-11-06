@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'YeogiOttaeJalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    display: flex;
+    margin: 0px;  
+    padding: 0px;
+    background-color: blue;
+    color: white;
+    font-family: 'YeogiOttaeJalnan';
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.box-1{
+    font-size: 65px;
+    
+}
+
+.box-1 {
+    font-size: 65px;
+    position: absolute;
+}
+
+.box-2 {
+    font-size: 40px;
+    position: absolute;
+    top: 70%;
+}
