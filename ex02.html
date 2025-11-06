@@ -4,45 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-
-        body {
-            background-color: black;
-            color: green;
-            margin: 0px;
-            padding: 0px;
-
-        }
-        .frame{
-            display: flex;
-            width: 320px;
-            height: 240px;
-            border: 1px solid white;
-           
-        }
-        .box{
-            width: 256px;
-            height: 64px;
-            background: blue;
-            color:  white;
-            margin: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-        }
+    @import "./ex02.css";
     </style>
 </head>
 <body>
-    <div class="frame"> 
-        <div class="box">1</div>
-       <div class="box">2</div>
-       <div class="box";>3</div>
-        <div class="box";>4</div>
-         <div class="box";>5</div>
-         <div>
-
-
-
+    <div class="box-1"> 던전앤 드래곤즈</div>
+    <div class="box-2"> 게임 시작 </div>
+    <script type="module">
+        import ex02 from "./ex02.js";
+        ex02();
+    </script>
 </body>
 </html>
