@@ -1,179 +1,121 @@
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  background: #f5f6f7;
-  margin: 0;
-  color: #222;
+    margin: 0;
+    background: #b2c7d9; 
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-header {
-  background: #b71c1c;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 20px;
-  font-weight: bold;
+#container {
+    width: 450px;
+    background: #fefefe;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
 }
 
-main {
-  max-width: 650px;
-  margin: 20px auto;
-  padding: 0 10px;
+/* 날짜 */
+#date-box {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-/* 글 작성 */
-.write-section {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  margin-bottom: 25px;
+/* 글귀 */
+#quote-box h2 {
+    font-size: 17px;
+    margin: 0 0 6px 0;
+}
+#quote-box p {
+    font-size: 13px;
+    color: #555;
 }
 
-textarea {
-  width: 100%;
-  border: none;
-  resize: none;
-  font-size: 15px;
-  padding: 8px;
-  min-height: 70px;
-  outline: none;
-  background: #fafafa;
-  border-radius: 8px;
+/* 이미지 */
+#image-box {
+    display: flex;
+    margin: 25px 0;
 }
 
-.write-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  align-items: center;
+#image-box img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-.write-actions input {
-  flex: 1;
-  margin-right: 10px;
-  padding: 6px 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* 채팅 영역 */
+#chat-box {
+    margin-top: 20px;
+    height: 260px;
+    overflow-y: auto;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-.write-actions button {
-  background: #b71c1c;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+/* 사용자 메시지 */
+.chat-user {
+    align-self: flex-end;
+    background: #fee500; 
+    padding: 10px 12px;
+    margin: 6px 0;
+    border-radius: 12px 12px 0 12px;
+    max-width: 70%;
+    font-size: 14px;
 }
 
-.write-actions button:hover {
-  background: #9a1414;
+/* AI 메시지 */
+.chat-ai {
+    align-self: flex-start;
+    background: #ffffff;
+    padding: 10px 12px;
+    margin: 6px 0;
+    border-radius: 12px 12px 12px 0;
+    max-width: 70%;
+    font-size: 14px;
+    border: 1px solid #ddd;
 }
 
-/* 게시글 */
-.post {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  position: relative;
+/* 입력창 */
+#input-area {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
 }
 
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #666;
+#input-area input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
-.post-content {
-  font-size: 15px;
-  margin: 10px 0;
-  white-space: pre-line;
+#input-area button {
+    padding: 12px 15px;
+    border: none;
+    background: #3a1d1d;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.post-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 8px;
+/* 안쪽 배경 변경 버튼 */
+#bg-btn-area {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
-.action-btn {
-  background: none;
-  border: none;
-  color: #b71c1c;
-  cursor: pointer;
-  font-size: 14px;
+#bg-btn-area button {
+    padding: 10px 16px;
+    background: #5c4b51;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.action-btn:hover {
-  text-decoration: underline;
-}
-
-/* 고정된 게시물 표시 */
-.pinned {
-  border: 2px solid #b71c1c;
-  box-shadow: 0 0 6px rgba(183, 28, 28, 0.3);
-}
-
-.pinned::before {
-  content: "📌 고정됨";
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  background: #b71c1c;
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-/* 댓글 */
-.comment-section {
-  margin-top: 10px;
-  border-top: 1px solid #eee;
-  padding-top: 10px;
-}
-
-.comment {
-  background: #f9f9f9;
-  border-radius: 6px;
-  padding: 6px 10px;
-  margin-bottom: 6px;
-}
-
-.comment small {
-  color: #666;
-}
-
-.comment-input {
-  display: flex;
-  margin-top: 10px;
-}
-
-.comment-input input {
-  flex: 1;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-right: 6px;
-}
-
-.comment-input button {
-  background: #b71c1c;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  margin: 30px 0;
+#bg-btn-area button:hover {
+    opacity: 0.85;
 }
